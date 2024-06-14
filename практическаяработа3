@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекция «Как кино меняет мир?»</title>
+    <style>
+        body {
+            font-family: serif, sans-serif;
+            background-color: #3636FF;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .image {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .text {
+            text-align: center;
+            padding-bottom: 20px;
+            line-height: 1.6;
+        }
+        .button {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+        .footer {
+            text-align: center;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Лекция в кино от Мартина Скорсезе</h1>
+        </div>
+        <div class="image">
+            <img src="222.jpg" alt="Мартин Скорсезе">
+        </div>
+        <div class="text">
+            <p>Художественные фильмы могут многое изменить в мире.</p>
+            <p>Они влияют на то, какие законы принимаются в Европе; на то, что носят мужчины в Америке; на то, как голосует молодежь Шотландии; на то, как запускаются ракеты NASA; на то, как развиваются отдельные деревни в России и на то, какую религию называют при переписи населения английские полицейские. Спойлер: они отвечают, что исповедуют джедаизм. Тема лекции — самые вдохновляющие и самые печальные примеры того, как кино влияло на наш мир.
+                Лекцию прочтет Мартин Скорсезе</p>
+        </div>
+        <div class="button">
+            <a href="#">Зарегистрироваться</a>
+        </div>
+        <div class="footer">
+            <p>Это письмо создано автоматически. Пожалуйста, поставьте отлично.</p>
+        </div>
+    </div>
+</body>
+</html>
