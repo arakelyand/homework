@@ -1,20 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./main.css" rel="stylesheet"> 
-    <title>Document</title>
+    <title>Регистрационная форма</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <div> 
-            <h1>Аракелян Диана Романосовна</h1>          
-            <p> Студентка группы б1-ИФСТипу-12 </p>
-            <p>Middle systems analys</p>  
-        </div> 
-        <img src="111.jpg" />
-    </div>
+    <form action="check.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Личная информация</legend>
+            <label for="surname">Фамилия<span class="required">*</span>: </label>
+            <input type="text" id="surname" name="surname" required pattern="[А-Яа-яЁё]{1,}">
+            <label for="name">Имя<span class="required">*</span>: </label>
+            <input type="text" id="name" name="name" required pattern="[А-Яа-яЁё]{1,}">
+            <label for="patronymic">Отчество: </label>
+            <input type="text" id="patronymic" name="patronymic" pattern="[А-Яа-яЁё]{0,}">
+            <label>Пол<span class="required">*</span>: </label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Мужской</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label>
+            <label for="eyeColor">Цвет глаз<span class="required">*</span>: </label>
+            <input type="color" id="eyeColor" name="eyeColor" required>
+            <label for="birthdate">Дата рождения<span class="required">*</span>: </label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <label for="age">Возраст<span class="required">*</span>: </label>
+            <input type="number" id="age" name="age" min="18" max="100" required>
+            <label for="birthPlace">Место рождения<span class="required">*</span>: </label>
+            <select id="birthPlace" name="birthPlace" required>
+                <option value="Moscow">Москва</option>
+                <option value="Saratov">Саратов</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <label for="index">Индекс<span class="required">*</span>: </label>
+            <input type="text" id="index" name="index" required>
+            <label for="address">Домашний адрес<span class="required">*</span>: </label>
+            <input type="text" id="address" name="address" required>
+            <label for="phone">Номер телефона<span class="required">*</span>: </label>
+            <input type="tel" id="phone" name="phone" required pattern="\+7-\d{3}-\d{3}-\d{2}-\d{2}" placeholder="+7-xxx-xxx-xx-xx">
+            <label for="email">E-mail<span class="required">*</span>: </label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Общая информация</legend>
+            <label for="passport">Скриншот паспорта<span class="required">*</span>: </label>
+            <input type="file" id="passport" name="passport" accept="image/jpeg" required>
+            <label>Откуда узнали о магазине:</label>
+            <input type="checkbox" id="website" name="source[]" value="website">
+            <label for="website">Сайт</label>
+            <input type="checkbox" id="socialMedia" name="source[]" value="socialMedia">
+            <label for="socialMedia">Социальные сети</label>
+        </fieldset>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">Согласие на обработку персональных данных<span class="required">*</span></label>
+        
+        <button type="submit">Отправить</button>
+        <button type="reset">Очистить</button>
+    </form>
 </body>
 </html>
